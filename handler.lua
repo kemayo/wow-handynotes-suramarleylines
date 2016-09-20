@@ -201,6 +201,9 @@ do
         if point.entrance and not ns.db.entrances then
             return false
         end
+        if point.level and point.level ~= currentLevel then
+            return false
+        end
         if ns.db.complete then
             return true
         end
