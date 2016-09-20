@@ -201,8 +201,15 @@ do
         if point.entrance and not ns.db.entrances then
             return false
         end
-        if ns.db.completed then
+        if ns.db.complete then
             return true
+        end
+        if point.achievement then
+            if point.criteria then
+                return not select(3, GetAchievementCriteriaInfoByID(point.achievement, point.criteria))
+            else
+                return not select(4, GetAchievementInfo(point.achievement))
+            end
         end
         if not point.quest then
             return true
