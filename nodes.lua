@@ -11,8 +11,11 @@ ns.points = {
         [24301940] = { achievement=10756, criteria=31919, }, -- Moon Guard
         [35702410] = { achievement=10756, criteria=31915, }, -- Moonwhisper Gulch
     },
-    ["FalanaarTunnels"] = { -- Suramar
+    ["FalanaarTunnels"] = { -- Fal'adore
         [65105210] = { achievement=10756, criteria=31916, level=33, }, -- Falanaar North
         [58107520] = { achievement=10756, criteria=31917, level=33, }, -- Falanaar South
+    },
+    ["LeylineMicro05"] = {
+        [48704870] = { achievement=10756, criteria=31919, }, -- Moon Guard
     },
 }
