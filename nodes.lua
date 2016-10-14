@@ -15,6 +15,9 @@ ns.points = {
         [65105210] = { achievement=10756, criteria=31916, level=33, }, -- Falanaar North
         [58107520] = { achievement=10756, criteria=31917, level=33, }, -- Falanaar South
     },
+    ["LeylineMicro02"] = {
+        [52304490] = { achievement=10756, criteria=31914, }, -- Kel'balor
+    },
     ["LeylineMicro04"] = {
         [54004470] = { achievement=10756, criteria=31915, }, -- Moonwhisper Gulch
     },
