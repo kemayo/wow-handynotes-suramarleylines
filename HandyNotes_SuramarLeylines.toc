@@ -1,4 +1,4 @@
-## Interface: 70000
+## Interface: 80000
 ## Title: HandyNotes_SuramarLeylines
 ## Notes: Leyline feeds in Suramar? Sure, why not?
 ## Author: Kemayo
