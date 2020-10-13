@@ -10,13 +10,10 @@ local GameTooltip = GameTooltip
 local HandyNotes = HandyNotes
 
 local function work_out_texture(atlas)
-    local texture, _, _, left, right, top, bottom = GetAtlasInfo(atlas)
+    atlas = C_Texture.GetAtlasInfo(atlas)
     return {
-        icon = texture,
-        tCoordLeft = left,
-        tCoordRight = right,
-        tCoordTop = top,
-        tCoordBottom = bottom,
+        icon = atlas.file,
+        tCoordLeft = atlas.leftTexCoord, tCoordRight = atlas.rightTexCoord, tCoordTop = atlas.topTexCoord, tCoordBottom = atlas.bottomTexCoord,
     }
 end
 local default_texture = work_out_texture("worldquest-questmarker-abilityhighlight")
@@ -68,7 +65,7 @@ local function handle_tooltip(tooltip, point)
             end
         end
         if point.quest then
-            if IsQuestFlaggedCompleted(point.quest) then
+            if C_QuestLog.IsQuestFlaggedCompleted(point.quest) then
                 tooltip:AddLine(ACTIVE_PETS, 0, 1, 0) -- Active
             else
                 tooltip:AddLine(FACTION_INACTIVE, 1, 0, 0) -- Inactive
@@ -208,7 +205,7 @@ do
         if not point.quest then
             return true
         end
-        return not IsQuestFlaggedCompleted(point.quest)
+        return not C_QuestLog.IsQuestFlaggedCompleted(point.quest)
     end
 end
 
